@@ -1,0 +1,9 @@
+<article class="wrapper-item">
+    <img [src]="item.url_img" alt="" *ngIf="item.url_img.length>0">
+    <div class="wrapper-descripcion">
+        <p class="nombre">{{item.nombre}}</p>
+        <p class="descripcion">{{item.descripcion}}</p>
+        <a target="_blank" [href]="item.url_pagina" *ngIf="item.url_pagina?.length>0" class="button is-info"> <i class="fa fa-eye" aria-hidden="true"></i> Ver pàgina</a>
+    </div>
+</article>
+<div class="linea"></div>

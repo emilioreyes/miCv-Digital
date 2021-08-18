@@ -1,0 +1,10 @@
+@import '../../../assets/colores.scss';
+@import '../../../assets/medidas.scss';
+.main {
+    p {
+        text-align: justify;
+    }
+    .linea {
+        margin-bottom: $padding;
+    }
+}

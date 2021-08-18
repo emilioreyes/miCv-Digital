@@ -1,0 +1,85 @@
+@import '../../../assets/colores.scss';
+@import '../../../assets/medidas.scss';
+.main {
+    .section-1 {
+        .descripcion {
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: 70%;
+            min-width: 200px;
+            padding-left: $padding;
+            .title {
+                padding-top: $padding;
+                color: $primario;
+                @media (max-width: 800px) {
+                    text-align: center;
+                }
+            }
+            p {
+                font-size: 14px;
+            }
+            ul {
+                li {
+                    i {
+                        width: 25px;
+                        padding-right: $padding;
+                        color: $primario;
+                    }
+                }
+                li:first-child i {
+                    color: rgb(182, 0, 0);
+                }
+                li:nth-child(2) i {
+                    color: rgb(216, 216, 1);
+                }
+                li:nth-child(3) i {
+                    color: rgb(3, 17, 90);
+                }
+                li:nth-child(4) i {
+                    color: rgb(8, 68, 20);
+                }
+                li:nth-child(5) i {
+                    color: rgb(51, 14, 96);
+                }
+                li:nth-child(6) i {
+                    color: rgb(1, 44, 50);
+                }
+            }
+            @media (max-width: 800px) {
+                padding-left: 0;
+            }
+        }
+        .foto {
+            flex-grow: 0;
+            flex-shrink: 0;
+            //  padding: $padding;
+            overflow: hidden;
+            border-radius: $border-radius;
+            width: 30%;
+            min-width: 150px;
+            background: #222;
+            justify-content: center;
+            text-align: center;
+            .title {
+                color: white;
+                margin: 0;
+            }
+            .profesion {
+                color: $primario;
+                letter-spacing: 3px;
+            }
+            img {
+                padding-bottom: $padding;
+            }
+        }
+    }
+    .section-2 {
+        padding: $padding;
+        background: white;
+        border-radius: $border-radius;
+    }
+    .card {
+        display: none;
+        max-width: calc(80%);
+    }
+}

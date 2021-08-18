@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <aside class="aside aside-1">
+        <article class="logo">
+            <div class="img">
+                <span class="nombre">CV-Digital</span>
+            </div>
+            <div class="burguer" (click)="addClass()"><i class="fas fa-bars"></i></div>
+        </article>
+
+        <nav class="menu">
+            <ul>
+                <li [id]="j" class="item-link" *ngFor="let item of menu;let j = index" (click)="setActive(j)">
+                    <a [routerLink]="item.path"><i [class]="item.icono"></i> {{item.nombre}}</a> </li>
+                <li class="item-link" (click)="addClass()"><a [routerLink]="" class="log-out"><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+            </ul>
+        </nav>
+
+
+    </aside>
+    <article class="main backGroundDegradado">
+        <router-outlet></router-outlet>
+    </article>
+    <aside class="aside aside-2">
+        <app-usuario [userLoged]="user"></app-usuario>
+        <div class="linea"></div>
+        <app-formulario></app-formulario>
+        <div class="linea"></div>
+        <app-mapa></app-mapa>
+        <div class="prueba">
+
+        </div>
+    </aside>
+</div>

@@ -1,0 +1,42 @@
+  @import '../../../assets/colores.scss';
+  @import '../../../assets/medidas.scss';
+  .tabs {
+      .tab {}
+  }
+  
+  .contenedor {
+      //padding-left: $padding;
+      .tab-content {
+          .contenido {
+              text-align: justify;
+          }
+      }
+      .intro {
+          text-align: justify;
+          padding-bottom: $padding;
+      }
+      #aptitudes,
+      #pasatiempos {
+          .header-list {
+              >li {
+                  font-weight: bolder;
+                  font-size: 10px;
+                  letter-spacing: 3px;
+                  text-transform: uppercase;
+                  color: rgb(140, 138, 138);
+                  padding-bottom: $padding;
+              }
+          }
+          ul ul li {
+              font-size: 14px;
+              padding-left: $padding;
+              color: #444;
+              font-weight: 100;
+              text-transform: initial;
+              letter-spacing: normal;
+              i {
+                  color: $primario
+              }
+          }
+      }
+  }

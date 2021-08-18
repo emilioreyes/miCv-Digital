@@ -1,0 +1,36 @@
+<div class="main">
+    <div class="section-1 seccion-1">
+        <div class="lst-cards">
+            <!--<div class="card" *ngFor="let item of lstServicios">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        {{item.titulo}}
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        {{item.descripcion}}
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="#" class="card-footer-item"> <i class="fab fa-whatsapp    "></i> </a>
+                </footer>
+            </div>-->
+            <div class="cartas" *ngFor="let item of lstServicios">
+                <header class="cartas-header">
+                    <p class="cartas-header-title">
+                        {{item.titulo}}
+                    </p>
+                </header>
+                <div class="cartas-content">
+                    <div class="content">
+                        {{item.descripcion}}
+                    </div>
+                </div>
+                <footer class="cartas-footer">
+                    <a class="wsp p-1" href="https://api.whatsapp.com/send?phone='+{{whatsapp}}'&text=Me interesa tu servicio de: {{item.titulo}}" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>

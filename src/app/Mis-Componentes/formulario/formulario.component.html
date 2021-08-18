@@ -1,0 +1,51 @@
+<div class="main">
+    <article class="message is-info">
+        <div class="message-header">
+            <p>Contàctame</p>
+            <button class="delete" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+            <form [formGroup]="contactForm" (ngSubmit)="sendForm()">
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input formControlName="email" class="input" type="email" placeholder="Email input" value="hello@" [ngClass]=" contactForm.get('email').invalid && contactForm.get('email').touched ? 'is-danger':'is-success'">
+                        <span class="icon is-small is-left">
+                 <i class="fas fa-envelope"></i>
+               </span>
+                        <span class="icon is-small is-right">
+                 <i class="fas fa-exclamation-triangle"></i>
+               </span>
+                    </div>
+                    <!--<p class="help is-danger">This email is invalid</p>-->
+                    <div class="errors" *ngFor="let error of errorMessage.email">
+                        <ng-container *ngIf="email.hasError(error.type)&& (email.dirty || email.touched) ">
+                            <small class="error-message">{{error.mensaje}}</small>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Message</label>
+                    <div class="control">
+                        <textarea formControlName="mensaje" class="textarea" placeholder="Escríbeme tu mensaje" (keyup)="onKeyUpEvent($event)" [ngClass]=" (contactForm.get('mensaje').invalid && contactForm.get('mensaje').touched) || mensaje.hasError('minlength') || mensaje.hasError('maxlength') ? 'is-danger':'is-success'"></textarea>
+                        <div class="errors" *ngFor="let error of errorMessage.mensaje">
+                            <ng-container *ngIf="mensaje.hasError(error.type)&& (mensaje.dirty || mensaje.touched) ">
+                                <small class="error-message">{{error.mensaje}}</small>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+                <progress class="progress is-primary" [value]="textLength" [max]="max">15%</progress>
+                <div class="field is-grouped">
+                    <div class="control animate__animated animate__headShake animate__infinite	infinite" *ngIf="contactForm.valid">
+                        <!--<button [disabled]="!contactForm.valid" class="button is-link" (click)="btnClick()">Enviar</button>
+                   --><a (click)="setMail()" class="wsp p-1 button is-fullwidth" href="https://api.whatsapp.com/send?phone='+{{whatsapp}}'&text='{{miEmail}}-{{miMensaje}}'" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </article>
+
+</div>

@@ -1,0 +1,39 @@
+@import '../../../assets/colores.scss';
+@import '../../../assets/medidas.scss';
+.wrapper-item {
+    padding-top: $padding;
+    padding-left: $padding;
+    display: flex;
+    justify-content: flex-start;
+    //  align-items: center;
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    .wrapper-descripcion {
+        padding-left: $padding;
+        .nombre {
+            font-weight: bolder;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgb(140, 138, 138);
+            //padding-bottom: $padding;
+        }
+        .descripcion {
+            font-size: 10px;
+            // padding-left: $padding;
+            color: #444;
+            font-weight: 100;
+            text-align: justify;
+            padding-bottom: $padding;
+        }
+        a {
+            text-transform: uppercase;
+            i {
+                padding-right: $padding;
+            }
+        }
+    }
+}

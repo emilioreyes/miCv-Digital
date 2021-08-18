@@ -1,0 +1,212 @@
+@import '../../../assets/medidas.scss';
+@import '../../../assets/colores.scss';
+.wrapper {
+    font-family: 'Roboto', sans-serif;
+    // height: 100vh;
+    display: flex;
+    margin: 20px 50px;
+    //border: 1px solid red;
+    border-radius: $border-radius;
+    overflow: hidden;
+    // background: red;
+    box-shadow: 0px 0px 16px #999;
+    aside {}
+    .aside-1 {
+        flex-grow: 1;
+        padding-left: $padding;
+        padding-top: $padding;
+        padding-bottom: $padding;
+        background: white;
+        max-width: calc(100% - calc(25%));
+        min-width: 150px;
+        @media (max-width: 800px) {
+            max-width: calc(100%);
+        }
+    }
+    .main {
+        //filter: drop-shadow(0px 0px 1px rgba(230, 230, 230, 0.8));
+        flex-grow: 2;
+        padding: $padding;
+        background: violet;
+        max-width: calc(100% - calc(50%));
+        min-width: 300px;
+        /* background: rgb(251, 251, 251);
+        background: linear-gradient(90deg, rgba(251, 251, 251, 1) 0%, rgba(250, 252, 252, 1) 0.5%, rgba(255, 255, 255, 1) 55%, rgba(247, 247, 247, 1) 99.5%, rgba(246, 246, 246, 1) 100%);
+        */
+        background: rgb(219, 219, 219);
+        background: linear-gradient(90deg, rgba(219, 219, 219, 1) 0%, rgba(234, 234, 234, 1) 27%, rgba(246, 246, 246, 1) 48%, rgba(239, 237, 237, 1) 80%, rgba(247, 247, 247, 1) 99.5%);
+        @media (max-width: 800px) {
+            max-width: calc(100%);
+        }
+    }
+    .aside-2 {
+        flex-grow: 1;
+        padding-right: $padding;
+        background: white;
+        max-width: calc(100% - calc(25%));
+        min-width: 150px;
+        @media (max-width: 800px) {
+            max-width: calc(100%);
+        }
+    }
+    @media (max-width:800px) {
+        flex-flow: row wrap;
+    }
+}
+
+.aside-1 {
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 20px;
+        .img {
+            background-image: url(../../../assets/img/monero-brands.svg);
+            background-size: 30% 100%;
+            background-position: left;
+            background-repeat: no-repeat;
+            width: calc(25%);
+            .nombre {
+                padding-left: calc(30%);
+                font-size: 2rem;
+                font-weight: bolder;
+                color: $primario;
+            }
+        }
+    }
+    .menu {
+        ul {
+            li {
+                position: relative;
+                list-style: none;
+                // padding-left: ;
+                a {
+                    padding-left: 20px;
+                    font-size: 14px;
+                    color: rgb(161, 164, 167);
+                    line-height: 3.5rem;
+                    // padding: 15px 0px 15px 0px;
+                    text-decoration: none;
+                    // border: 1px solid #222;
+                    display: block;
+                    i {
+                        padding-right: $padding;
+                    }
+                    &:hover {
+                        color: $primario;
+                        /*   border-top-left-radius: $border-radius;
+                        border-bottom-left-radius: $border-radius;
+                        border-top-right-radius: $border-radius;*/
+                    }
+                }
+                &:hover {
+                    background: rgb(219, 219, 219);
+                    background: linear-gradient(90deg, rgba(234, 234, 234, 1) 27%, rgba(219, 219, 219, 1) 100%);
+                    border-bottom-left-radius: $border-radius;
+                    border-top-left-radius: $border-radius;
+                    //  box-shadow: 0px 0px 1px #999;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -40px;
+                        right: 0;
+                        height: 40px;
+                        width: 40px;
+                        border-bottom-right-radius: 50%;
+                        // background: #000;
+                        box-shadow: 0 20px 0 0 rgb(219, 219, 219);
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -40px;
+                        right: 0;
+                        height: 40px;
+                        width: 40px;
+                        border-top-right-radius: 50%;
+                        //background: #000;
+                        box-shadow: 0 -20px 0 0 rgb(219, 219, 219);
+                    }
+                }
+            }
+        }
+    }
+    .log-out {
+        text-decoration: none;
+        padding-left: $padding;
+        i {
+            padding-right: $padding;
+        }
+    }
+}
+
+.link-active {
+    background: rgb(219, 219, 219);
+    background: linear-gradient(90deg, rgba(234, 234, 234, 1) 27%, rgba(219, 219, 219, 1) 100%);
+    border-bottom-left-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+    //  box-shadow: 0px 0px 1px #999;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        border-bottom-right-radius: 50%;
+        // background: #000;
+        box-shadow: 0 20px 0 0 rgb(219, 219, 219);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        border-top-right-radius: 50%;
+        //background: #000;
+        box-shadow: 0 -20px 0 0 rgb(219, 219, 219);
+    }
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cuadro {
+    width: 200px;
+    height: 80px;
+    background-color: #522d5b;
+    position: relative;
+}
+
+.cuadro:before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    border-bottom-right-radius: 50%;
+    background: #000;
+    box-shadow: 0 20px 0 0 #522d5b;
+}
+
+.cuadro:after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    border-top-right-radius: 50%;
+    background: #000;
+    box-shadow: 0 -20px 0 0 #522d5b;
+}
+
+.cuadro:before {}
+
+.cuadro:after {}

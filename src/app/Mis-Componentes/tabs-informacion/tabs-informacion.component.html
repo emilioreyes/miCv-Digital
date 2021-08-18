@@ -1,0 +1,94 @@
+<div class="tabs is-centered is-small is-boxed">
+    <ul>
+        <li class="tab" (click)="activarTab('aptitudes')" id="tab-aptitudes">
+            <a>
+                <span class="icon is-small"><i class="fas fa-brain"></i></span>
+                <span>Aptitudes</span>
+            </a>
+        </li>
+        <!--<li class="tab" (click)="activarTab('redes')" id="tab-redes">
+            <a>
+                <span class="icon is-small"><i class="fas fa-icons"></i></span>
+                <span>Redes</span>
+            </a>
+        </li>-->
+        <li class="tab" (click)="activarTab('experiencia')" id="tab-experiencia">
+            <a>
+                <span class="icon is-small"><i class="fab fa-wpforms"></i></span>
+                <span>Experiencia</span>
+            </a>
+        </li>
+        <li class="tab" (click)="activarTab('pasatiempos')" id="tab-pasatiempos">
+            <a>
+                <span class="icon is-small"><i class="fas fa-guitar"></i></span>
+                <span>Pasatiempos</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="contenedor">
+    <div class="tab-content" id="aptitudes">
+        <p class="intro">Aquí puedes encontrar una lista de las tecnologias con las que e desarrollado diferentes proyectos.</p>
+        <ul class="header-list">
+            <li class=""><i class="far fa-check-circle"></i> Lenguajes de Programacion
+                <ul>
+                    <li>
+                        <i class="fab fa-js"></i> Javascript (Typesxcript)
+                    </li>
+                    <li>
+                        <i class="fab fa-java"></i> Java
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle" aria-hidden="true"></i> Visual Basic
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>C++
+                    </li>
+                </ul>
+            </li>
+            <li class=""><i class="far fa-check-circle"></i> Bases de Datos
+                <ul>
+                    <li><i class="fas fa-database"></i> Mysql</li>
+                    <li><i class="fas fa-database"></i> Sql</li>
+                    <li><i class="fas fa-server"></i> Firebase</li>
+                </ul>
+            </li>
+            <li class=""><i class="far fa-check-circle"></i> Framework Css
+                <ul>
+                    <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>Bulma</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>Animate.css</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>Sweetalert2</li>
+                </ul>
+            </li>
+            <li class=""><i class="far fa-check-circle"></i> Entornos de Programacion
+                <ul>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>Visual Studio Code</li>
+                    <li><i class="fab fa-android"></i> Android Studio</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i>Visual Studio</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--<div class="tab-content" id="redes">
+        <p class="intro">Redes</p>
+        <p class="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, expedita doloremque nostrum illum provident aspernatur aut beatae labore dolor animi quam quibusdam, praesentium delectus nemo vitae distinctio in quo eaque! Voluptatem praesentium
+            provident iure nisi distinctio, aspernatur hic in est earum quidem laboriosam ipsum quasi? Explicabo facilis distinctio architecto natus ipsum alias culpa. Praesentium aperiam amet similique saepe eum enim!</p>
+    </div>-->
+    <div class="tab-content" id="experiencia">
+        <p class="intro">Aqui comparto parte de mis experiencias laborales</p>
+
+        <ng-container *ngFor="let misItem of lstItem">
+            <app-item-list [item]="misItem"></app-item-list>
+        </ng-container>
+    </div>
+    <div class="tab-content " id="pasatiempos">
+        <p class="intro">En mis tiempos libres soy músico aficionado, toco la guitarra y el teclado.</p>
+        <ul class="header-list">
+            <li><i class="fas fa-guitar"></i> Tocar Guitarra</li>
+            <li><i class="fas fa-columns"></i> Tocar el teclado</li>
+            <li><i class="fas fa-users"></i> Conocer personas</li>
+            <li><i class="fas fa-swimmer"></i> Nadar</li>
+        </ul>
+    </div>
+</div>

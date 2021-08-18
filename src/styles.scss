@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import './assets/medidas.scss';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    padding-top: $padding !important;
+    padding-bottom: $padding !important;
+    background: rgb(224, 224, 224);
+    background: radial-gradient(circle, rgba(224, 224, 224, 1) 0%, rgba(190, 190, 190, 1) 23%, rgba(224, 224, 224, 1) 68%, rgba(191, 191, 191, 1) 96%);
+    @media (max-width: 800px) {
+        padding: 0 !important;
+    }
+}
+
+.backGroundDegradado {
+    background: rgb(219, 219, 219);
+    background: linear-gradient(90deg, rgba(219, 219, 219, 1) 0%, rgba(234, 234, 234, 1) 27%, rgba(246, 246, 246, 1) 48%, rgba(239, 237, 237, 1) 80%, rgba(247, 247, 247, 1) 99.5%);
+}
+
+.linea {
+    height: 2px;
+    background-color: rgb(224, 221, 221);
+    margin-top: $padding;
+}
+
+.section-1 {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: $padding;
+    background: white;
+    border-radius: $border-radius;
+    margin-bottom: $padding;
+}
+
+.neumorphismo {
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}

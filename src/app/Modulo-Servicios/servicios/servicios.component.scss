@@ -1,0 +1,120 @@
+@import '../../../assets/colores.scss';
+@import '../../../assets/medidas.scss';
+%center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    .seccion-1 {
+        .card {
+            // width: 100%;
+            //display: block;
+        }
+        .masonry-layout {
+            --columns: 1;
+            --gap: 2rem;
+            $columns: 4;
+            display: grid;
+            grid-template-columns: repeat(var(--columns), 1fr);
+            grid-gap: var(--gap);
+            .masonry-column {}
+            .masonry-item {
+                margin-bottom: $padding;
+            }
+            @for $i from 1 through $columns {
+                &.columns-#{$i} {
+                    --columns:#{$i};
+                }
+            }
+        }
+        .lst-cards {
+            /* .card {
+                color: white;
+                .card-header {
+                    background: $primario;
+                    .card-header-title {}
+                }
+                .card-content {
+                    text-align: center;
+                    font-size: 14px;
+                    background: #075E54;
+                    background-size: cover cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .card-footer {
+                    bottom: 0px;
+                    background-color: $wsp;
+                    a {
+                        color: white;
+                        i {
+                            padding-right: 3px;
+                        }
+                    }
+                }
+            }*/
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            .cartas {
+                display: inherit;
+                grid-template-rows: 75px auto 50px;
+                // box-shadow: 0px 0px 6px #444;
+                .cartas-header {
+                    @extend %center-flex;
+                    border-top-left-radius: $border-radius;
+                    border-top-right-radius: $border-radius;
+                    background: $primario;
+                    color: bisque;
+                    .cartas-header-title {
+                        font-weight: bolder;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                    }
+                }
+                .cartas-content {
+                    @extend %center-flex;
+                    padding: $padding;
+                    color: wheat;
+                    text-align: center;
+                    font-size: 14px;
+                    background: #075E54;
+                    background-size: cover cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .cartas-footer {
+                    @extend %center-flex;
+                    border-bottom-left-radius: $border-radius;
+                    border-bottom-right-radius: $border-radius;
+                    background-color: $wsp;
+                    a {
+                        color: #444;
+                        width: 100%;
+                        text-align: center;
+                        i {
+                            padding-right: 3px;
+                        }
+                        &:hover {
+                            color: antiquewhite;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1250px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: 500px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        @media (max-width:800px) {
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

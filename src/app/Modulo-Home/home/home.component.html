@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <aside class="aside aside-1">
+        <article class="logo">
+            <div class="img">
+                <span class="nombre">GECOVE</span>
+            </div>
+        </article>
+        <br><br><br>
+        <article class="menu">
+            <ul>
+                <li [id]="j" class="item-link" *ngFor="let item of menu;let j = index" (click)="setActive(j)">
+                    <a [routerLink]="item.path"><i [class]="item.icono"></i> {{item.nombre}}</a> </li>
+            </ul>
+        </article>
+        <br> <br> <br>
+        <a [routerLink]="" class="log-out"><i class="fas fa-sign-out-alt"></i>Salir</a>
+    </aside>
+    <article class="main">
+        <router-outlet></router-outlet>
+    </article>
+    <aside class="aside aside-2">
+        <p>Modulo home</p>
+    </aside>
+</div>
