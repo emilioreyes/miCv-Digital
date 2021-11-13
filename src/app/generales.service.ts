@@ -59,7 +59,7 @@ export class GeneralesService {
     id: 0,
     url_img: "../../../assets/img/logoJunta.ico",
     nombre: "Sistema Control JAPMAN",
-    descripcion: "Desarrollador del Sistema para el control del consumo para la Junta Parroquial de Agua Manglaralto"
+    descripcion: "Desarrollador del Sistema para el control del consumo de agua potable y emision de planillas para la Junta Parroquial de Agua Manglaralto"
   }, {
     id: 1,
     url_img: "../../../assets/img/firebase.png",
@@ -74,13 +74,20 @@ export class GeneralesService {
   ]
   itemDestacados: Item[] = [{
     id: 0,
+    url_img: "../../../assets/img/logoHMP.png",
+    nombre: "HOME & MEDIA PRODUCTS",
+    descripcion: "License Management System Client. " +
+      "En HMP me desempeño como desarrollador Frontend Vue + Element desde Septiembre 2021 hasta la actualidad",
+    url_pagina: "http://licenses.myhmp.org/#/login"
+  }, {
+    id: 1,
     url_img: "../../../assets/img/logoJunta.ico",
     nombre: "Sistema Control JAPMAN",
     descripcion: "Sistema para el control del consumo de agua para la Junta de Agua Potable Manglaralto." +
       "Este sistema se desarrollo en el 2015 y desde aquella fecha hasta la actualidad hemos respondido a las modificaciones y requerimientos que" +
       " las distintas administraciones han requerido."
   }, {
-    id: 1,
+    id: 2,
     url_img: "../../../assets/img/firebase.png",
     nombre: "Firebase Stores",
     descripcion: "Desarrollador de tiendas en linea para emprededores Angular-Firebase." +
@@ -91,24 +98,24 @@ export class GeneralesService {
     id: 3,
     url_img: "../../../assets/img/logo_toli.png",
     nombre: "Toli Store",
-    descripcion: "Toli Store es una nueva marca de ropa que actualmente està en proceso de registro; tenemos stock de camisetas. " +
+    descripcion: "ToliStore es una nueva marca debidamente registrada en el Servicio Nacional de Derechos Intelectuales. " +
       "El proyecto està en fase de expanciòn y actualmente ya contamos con una tienda en linea, màs redes sociales que permiten visualizar la marca y los productos",
     url_pagina: "https://toli-store-2872f.web.app/"
-  },
+  },/*,
   {
     id: 4,
     url_img: "../../../assets/img/images.png",
     nombre: "GECOVE",
     descripcion: "Sistema de Gestiòn de Contabilidad y Ventas. " +
       "Actualmente el proyecto està en fase de desarrollo, el Backend de la plataforma esta siendo desarrollado con Java + Spring boot + Spring Security" +
-      " El Frontend serà multiplataforma, tendremos version Web (Angular) y Version Web (Ionic)",
+      " El Frontend serà multiplataforma, tendremos version Web (Angular) y Version Mobil (Ionic)",
     url_pagina: ""
-  }, {
-    id: 5,
+  }*/, {
+    id: 4,
     url_img: "../../../assets/img/lampara.jpg",
     nombre: "eColorFul Magic",
-    descripcion: "Las eColoFul Magic es un conjunto de lamparas que podrás controlar con el Bluetooth de tu dispositivo móvil." +
-      " Úsalas como lamparas de noche en tu habitación, en tu sala o como complemento para arreglos de mesa y adaptalas al color de tu preferencia",
+    descripcion: "Las eColoFul Magic es un conjunto de lamparas que puedes controlar con el Bluetooth de tu dispositivo móvil." +
+      " El prototipo funcional esta listo, la aplicacion mobil esta desarrollada en Android",
     url_pagina: "https://play.google.com/store/apps/details?id=com.project.emilio.bt"
   }
   ]
@@ -193,21 +200,22 @@ export class GeneralesService {
       descripcion: "Creamos soluciones informáticas que requieran de programación para comercios en general."
     }, {
       id: 2,
-      titulo: "Redes Sociales",
-      descripcion: "Asesoramos en el uso de redes sociales para que puedas administrar tu negocio o emprendimiento. Te mostramos como usar Facebook Business Suite" +
-        " para que usted mismo administre sus anuncios publicitarios."
-    }, {
-      id: 3,
       titulo: "Soporte Técnico",
       descripcion: "Brindamos a nuestros clientes el soporte técnico necesario en el uso de aplicativos desarrollados por nosotros."
     }, {
-      id: 4,
+      id: 3,
       titulo: "Asistencia Remota",
       descripcion: "Contamos con asistencia remota para temas informáticos en general. "
     }, {
+      id: 4,
+      titulo: "Redes Sociales",
+      descripcion: "Asesoramos en el uso de redes sociales para que puedas administrar tu negocio o emprendimiento. Te mostramos como usar Facebook Business Suite" +
+        " para que usted mismo administre su negocio o sus anuncios publicitarios. "
+    }, {
       id: 5,
-      titulo: "Acompañante",
-      descripcion: '"Cuidado y me bacilo hasta tu pelada." =D'
+      titulo: "Emprendedor",
+      descripcion: 'Te ayudamos a encaminar tu idea de negocio, a planificar estrategias para ventas electrónicas, a configurar tus redes sociales (Facebook, Instagram) de tu negocio, ' +
+        'podemos asesorarte en el registro de marcas para productos, etc...'
     }
   ]
 }

@@ -2,7 +2,7 @@
     <article class="message is-info">
         <div class="message-header">
             <p>Contàctame</p>
-            <button class="delete" aria-label="delete"></button>
+            <!--<button class="delete" aria-label="delete"></button>-->
         </div>
         <div class="message-body">
             <form [formGroup]="contactForm" (ngSubmit)="sendForm()">
@@ -39,7 +39,7 @@
                 <div class="field is-grouped">
                     <div class="control animate__animated animate__headShake animate__infinite	infinite" *ngIf="contactForm.valid">
                         <!--<button [disabled]="!contactForm.valid" class="button is-link" (click)="btnClick()">Enviar</button>
-                   --><a (click)="setMail()" class="wsp p-1 button is-fullwidth" href="https://api.whatsapp.com/send?phone='+{{whatsapp}}'&text='{{miEmail}}-{{miMensaje}}'" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                   --><a (click)="setMail()" class="wsp p-1 button is-fullwidth" href="https://api.whatsapp.com/send?phone='+{{whatsapp}}'&text='{{miMensaje}}'" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 
                     </div>
 

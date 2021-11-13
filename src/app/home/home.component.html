@@ -11,7 +11,7 @@
             <ul>
                 <li [id]="j" class="item-link" *ngFor="let item of menu;let j = index" (click)="setActive(j)">
                     <a [routerLink]="item.path"><i [class]="item.icono"></i> {{item.nombre}}</a> </li>
-                <li class="item-link" (click)="addClass()"><a [routerLink]="" class="log-out"><i class="fas fa-sign-out-alt"></i>Salir</a></li>
+                <!--<li class="item-link" (click)="addClass()"><a [routerLink]="" class="log-out"><i class="fas fa-sign-out-alt"></i>Salir</a></li>-->
             </ul>
         </nav>
 

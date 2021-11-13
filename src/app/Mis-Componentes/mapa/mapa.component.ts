@@ -12,7 +12,7 @@ import { MapInfoWindow } from '@angular/google-maps';
 export class MapaComponent implements OnInit {
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow;
   apiLoaded: Observable<boolean>;
-  center: google.maps.LatLngLiteral = { lat: -2.222739, lng: -80.857348 };
+  center: google.maps.LatLngLiteral = { lat: -2.223962, lng: -80.857726 };
   marker: google.maps.Marker;
   constructor(private httpClient: HttpClient) {
 

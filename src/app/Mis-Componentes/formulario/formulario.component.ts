@@ -29,10 +29,8 @@ export class FormularioComponent implements OnInit {
 
   onKeyUpEvent(event: any) {
     let palabra = event.target.value;
-    console.log(palabra);
     this.textLength = palabra.length;
     this.miMensaje = palabra;
-
   }
 
   sendForm() {
